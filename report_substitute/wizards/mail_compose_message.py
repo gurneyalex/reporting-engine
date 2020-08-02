@@ -8,7 +8,6 @@ class MailComposeMessage(models.TransientModel):
 
     _inherit = "mail.compose.message"
 
-    @api.multi
     @api.onchange("template_id")
     def onchange_template_id_wrapper(self):
         if self.template_id:
